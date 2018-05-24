@@ -34,7 +34,7 @@
   to { transform: rotate(360deg); }
 }
 
-.App ul {
+.App .items {
   padding: 0;
   margin: 0;
   list-style: none;
@@ -42,20 +42,20 @@
   flex-flow: row wrap;
 }
 
-.App ul:after {
+.App .items:after {
   content: "";
   flex: auto;
   width: 200px;
   height: 200px;
 }
 
-.App ul li{
+.App .items > li{
   width: 50%;
   /*height: 200px;*/
   flex-grow: 1;
 }
 
-.App ul li img {
+.App .items > li img {
   /*width: 130px;*/
   /*height: 160px;*/
   /*margin: 10px auto;*/
@@ -67,7 +67,7 @@
   float: left;
 }
 
-.items {
+.item-container {
   margin: 10px;
   box-shadow: inset 0px 0px 4px #d5d6dc;
   /*box-shadow: 0px 1px 3px 0px #aeaeae;*/
@@ -77,12 +77,51 @@
   overflow: hidden;
 }
 
-.items .label {
+.item-name {
   float: left;
   font-size: 36px;
-  margin: 0 30px;
   text-transform: uppercase;
   font-family: Gaegu, cursive;
+}
+
+.item-detail {
+  float: left;
+  width: 55%;
+  margin: 0 20px;
+}
+
+.item-skill {
+  list-style: none;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.item-skill li {
+  width: 100%;
+  float: left;
+}
+
+.item-skill .label {
+  float: left;
+  font-size: 20px;
+  width: 27%;
+}
+
+.item-skill .bar {
+  width: 73%;
+  height: 28px;
+  background: #e4e4e4;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: inset 0px 0px 3px #d4d4d4;
+}
+
+.item-skill .bar-value {
+  width: 100%;
+  background: #f3701a;
+  height: 100%;
+  border-radius: 0 19px 19px 0;
 }
 
 #add-bar {
@@ -126,6 +165,7 @@
   width: 100%;
   height: 100%;
   top: 0;
+  visibility: hidden;
 }
 
 #modal > div {

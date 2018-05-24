@@ -38,12 +38,34 @@ class App extends Component {
       <div className="App">
         <h1 id={"title"}>My Pokedex</h1>
         <div id="App-list">
-          <ul>
+          <ul className={"items"}>
             {
               this.state.cards.map(item => <li key={ item.id }>
-                <div className={"items"}>
+                <div className={"item-container"}>
                   <img src={ item.imageUrl } />
-                  <div className={"label"}>{ item.name }</div>
+                  <div className={"item-detail"}>
+                    <div className={"item-name"}>{ item.name }</div>
+                    <ul className={"item-skill"}>
+                      <li>
+                        <div className={"label"}>{ "HP" }</div>
+                        <div className={"bar"}>
+                          <div className={"bar-value"} style={{width: `50%`}} />
+                        </div>
+                      </li>
+                      <li>
+                        <div className={"label"}>{ "STR" }</div>
+                        <div className={"bar"}>
+                          <div className={"bar-value"} style={{width: `80%`}} />
+                        </div>
+                      </li>
+                      <li>
+                        <div className={"label"}>{ "WEAK" }</div>
+                        <div className={"bar"}>
+                          <div className={"bar-value"} style={{width: `30%`}} />
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
               </li>)
             }
@@ -60,12 +82,14 @@ class App extends Component {
               <input type={"text"} placeholder={"Find pokemon"}/>
             </div>
             <div id={"search-list"}>
-              <ul>
+              <ul className={"items"}>
                 {
                   this.state.cards.map(item => <li key={ item.id }>
-                    <div className={"items"}>
+                    <div className={"item-container"}>
                       <img src={ item.imageUrl } />
-                      <div className={"label"}>{ item.name }</div>
+                      <div className={"item-detail"}>
+                        <div className={"item-name"}>{ item.name }</div>
+                      </div>
                     </div>
                   </li>)
                 }
