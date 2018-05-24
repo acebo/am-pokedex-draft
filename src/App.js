@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import axios from 'axios'
+import Cute from './cute.png'
 
 const COLORS = {
   Psychic: "#f8a5c2",
@@ -22,7 +23,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    axios.get('http://192.168.1.46:3030/api/cards').then(response => {
+    axios.get('http://localhost:3030/api/cards').then(response => {
       const { data } = response
 
       console.log(data)
@@ -42,7 +43,7 @@ class App extends Component {
             {
               this.state.cards.map(item => <li key={ item.id }>
                 <div className={"item-container"}>
-                  <img src={ item.imageUrl } />
+                  <img className={"item-image"} src={ item.imageUrl } />
                   <div className={"item-detail"}>
                     <div className={"item-name"}>{ item.name }</div>
                     <ul className={"item-skill"}>
@@ -64,9 +65,17 @@ class App extends Component {
                           <div className={"bar-value"} style={{width: `30%`}} />
                         </div>
                       </li>
+                      <li>
+                        <div className={"item-level-container"}>
+                          <img src={Cute} />
+                          <img src={Cute} />
+                          <img src={Cute} />
+                        </div>
+                      </li>
                     </ul>
                   </div>
                 </div>
+                <div className={"item-remove"}>X</div>
               </li>)
             }
           </ul>
@@ -86,11 +95,39 @@ class App extends Component {
                 {
                   this.state.cards.map(item => <li key={ item.id }>
                     <div className={"item-container"}>
-                      <img src={ item.imageUrl } />
+                      <img className={"item-image"} src={ item.imageUrl } />
                       <div className={"item-detail"}>
                         <div className={"item-name"}>{ item.name }</div>
+                        <ul className={"item-skill"}>
+                          <li>
+                            <div className={"label"}>{ "HP" }</div>
+                            <div className={"bar"}>
+                              <div className={"bar-value"} style={{width: `50%`}} />
+                            </div>
+                          </li>
+                          <li>
+                            <div className={"label"}>{ "STR" }</div>
+                            <div className={"bar"}>
+                              <div className={"bar-value"} style={{width: `80%`}} />
+                            </div>
+                          </li>
+                          <li>
+                            <div className={"label"}>{ "WEAK" }</div>
+                            <div className={"bar"}>
+                              <div className={"bar-value"} style={{width: `30%`}} />
+                            </div>
+                          </li>
+                          <li>
+                            <div className={"item-level-container"}>
+                              <img src={Cute} />
+                              <img src={Cute} />
+                              <img src={Cute} />
+                            </div>
+                          </li>
+                        </ul>
                       </div>
                     </div>
+                    <div className={"item-add"}>Add</div>
                   </li>)
                 }
               </ul>

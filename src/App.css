@@ -53,9 +53,10 @@
   width: 50%;
   /*height: 200px;*/
   flex-grow: 1;
+  position: relative;
 }
 
-.App .items > li img {
+.App .items > li .item-image {
   /*width: 130px;*/
   /*height: 160px;*/
   /*margin: 10px auto;*/
@@ -70,11 +71,30 @@
 .item-container {
   margin: 10px;
   box-shadow: inset 0px 0px 4px #d5d6dc;
-  /*box-shadow: 0px 1px 3px 0px #aeaeae;*/
   background: #f3f4f7;
   padding: 10px 15px;
   border-radius: 1px;
   overflow: hidden;
+}
+
+.item-remove, .item-add {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 32px;
+  padding: 0 10px;
+  cursor: pointer;
+  color: #dc7777;
+  visibility: hidden;
+}
+
+.App .items > li:hover .item-remove,
+.App .items > li:hover .item-add {
+  visibility: visible;
+}
+
+.App .items > li:hover .item-container {
+  box-shadow: 0px 1px 3px 0px #aeaeae;
 }
 
 .item-name {
@@ -124,6 +144,15 @@
   border-radius: 0 19px 19px 0;
 }
 
+.item-level-container {
+  margin: 10px 0;
+}
+
+.item-level-container img {
+  width: 48px;
+  padding: 1px;
+}
+
 #add-bar {
   background: #ec5656;
   width: 100%;
@@ -143,6 +172,7 @@
   right: 0;
   margin: auto;
   box-shadow: inset 0px 6px 6px #d9333387;
+  cursor: pointer;
 }
 
 #add-button:after {
