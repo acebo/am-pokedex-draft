@@ -16,13 +16,13 @@ We want you to build a web application with the following requirements:
 
 ## Also, we already prepared some stuff for you!!! :D
 
-#### 1. Base project (includes iPad layout screen, so cool!!)
+### 1. Base project (includes iPad layout screen, so cool!!)
 
-#### 2. Service API
+### 2. Service API
   - You can run service api by `yarn run api`
   - The endpoint to get Pokémon list is `http://localhost:3030/api/cards`
 
-#### 3. How to calculate `HP level`, `Strength level`, `Weakness level` and `Happiness level`.
+### 3. How to calculate `HP level`, `Strength level`, `Weakness level` and `Happiness level`.
   - HP level calculation
     -
   - Strength level calculation
@@ -32,15 +32,15 @@ We want you to build a web application with the following requirements:
   - Happiness level calculation
     -
 
-#### 4. Interactive MockUp (as a .gif file)
+### 4. Interactive MockUp (as a .gif file)
 
 ![Pokédex MockUp](screenshot/exam-crop.gif)
 
-#### 5. Fonts (from Google Fonts)
+### 5. Fonts (from Google Fonts)
   - `Atma:700`
   - `Gaegu`
 
-#### 6. Color codes
+### 6. Color codes
 
 ![Pokédex MockUp](screenshot/color-codes.png)
 
