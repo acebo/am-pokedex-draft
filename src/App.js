@@ -38,10 +38,30 @@ class App extends Component {
             weak: _.size(_.get(c, 'weaknesses')) * 100,
           }
           //hp: max hp = 100, eg 110 = 100, 90 = 90, other = 0
-          //atk: attacks length * 50, eg 0 = 0, 1 = 50, 2 = 100, >2 = 100, other = 0 
+          //atk: attacks length * 50, eg 0 = 0, 1 = 50, 2 = 100, >2 = 100, other = 0
           //weak: weaknesses length * 100, eg 0 = 0, 1 = 100, other = 0
           //damage: sum of each attacks damage, eg: 50+ = 50, 20* = 20, 10 = 10, other = 0 
           //level: ((hp / 10) + (damage /10 ) + 10 - (weaknesses length)) / 5
+          //
+          // ตัวอย่าง Monster {
+          //   name: 'Mock Monster',
+          //   hp: 110,
+          //   attacks: [
+          //     { name: 'attack A', damage: '20+'},
+          //     { name: 'attack B', damage: '40x'}
+          //   ],
+          //   weaknesses: [
+          //     { name: 'weakness A'},
+          //   ]
+          // }
+          //
+          // ค่าที่จะใช้นำไปแสดง คือ {
+          //   hp: 100,
+          //   atk: '100%',
+          //   weak: '50%',
+          //   damage: 60,
+          //   level: ((100/10) + (60/10) + 10 - 1) / 5 // (10+6+10-1) /5 // lv 5
+          // }
           const damage = _.chain(c)
             .get('attacks')
             .map(a => {

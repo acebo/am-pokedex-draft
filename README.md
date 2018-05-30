@@ -23,14 +23,11 @@ We want you to build a web application with the following requirements:
   - The endpoint to get Pokémon list is `http://localhost:3030/api/cards`
 
 ### 3. How to calculate `HP level`, `Strength level`, `Weakness level` and `Happiness level`.
+
   - HP level calculation
-    -
   - Strength level calculation
-    -
   - Weakness level calculation
-    -
   - Happiness level calculation
-    -
 
 ### 4. Interactive MockUp (as a .gif file)
 
