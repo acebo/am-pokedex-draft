@@ -42,6 +42,8 @@ We want you to build a web application with the following requirements:
 
 #### 6. Color codes
 
+![Pokédex MockUp](screenshot/color-codes.png)
+
 ## How we score you??!!!
   - If you can complete all the requirements above, We surely score you 100!!!! NO reason!!
     - We will give you all the feedback later ;)
