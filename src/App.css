@@ -45,7 +45,7 @@
 .App .items:after {
   content: "";
   flex: auto;
-  width: 200px;
+  width: 50%;
   height: 200px;
 }
 
