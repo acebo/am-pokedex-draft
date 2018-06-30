@@ -1,4 +1,4 @@
-# AppMan Pokédex (My Pokémon cards list)
+# AppMan Pokédex (---- DRAFT ----)
 
 | User Story | Acceptance Criteria |
 |:---|:---|
